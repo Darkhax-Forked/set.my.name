@@ -24,6 +24,6 @@ public class SetMyName
 
     public void reload(AddReloadListenerEvent event)
     {
-        ((ReloadableResourceManager) event.getDataPackRegistries().getResourceManager()).registerReloadListener(new NameDumper());
+        event.addListener(new NameDumper());
     }
 }
